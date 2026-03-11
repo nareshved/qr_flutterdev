@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Generate URL - QR Creator</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d7ff2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .material-symbols-outlined.outlined {
+            font-variation-settings: 'FILL' 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen antialiased flex flex-col max-w-[480px] mx-auto overflow-x-hidden relative shadow-2xl">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10 border-b border-slate-200 dark:border-slate-800">
+<a class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">chevron_left</span>
+</a>
+<h1 class="text-lg font-bold tracking-tight">URL QR Code</h1>
+<div class="w-10"></div> <!-- Spacer for centering -->
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col p-4 gap-6 pb-24">
+<!-- Input Section -->
+<section class="flex flex-col gap-2">
+<label class="text-sm font-medium text-slate-600 dark:text-slate-400 pl-1">Website URL</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined outlined absolute left-4 text-slate-400">link</span>
+<input class="w-full bg-white dark:bg-[#1a2634] border border-slate-200 dark:border-slate-700 rounded-xl h-14 pl-12 pr-20 text-base focus:ring-2 focus:ring-primary focus:border-primary transition-all placeholder:text-slate-400" placeholder="https://example.com" type="url" value="https://designsystem.com"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-sm font-medium px-3 py-1.5 rounded-lg transition-colors text-primary">Paste</button>
+</div>
+</section>
+<!-- Generate Button -->
+<button class="w-full h-14 rounded-xl bg-primary text-white font-bold text-base shadow-lg shadow-primary/30 hover:bg-primary/90 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">qr_code_2</span>
+            Generate QR Code
+        </button>
+<div class="h-px bg-slate-200 dark:bg-slate-800 my-2 w-full max-w-[200px] mx-auto"></div>
+<!-- Preview Area -->
+<section class="flex flex-col items-center gap-6">
+<h2 class="text-sm font-medium text-slate-500 uppercase tracking-wider">Preview</h2>
+<div class="bg-white dark:bg-white p-6 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800 w-64 h-64 flex items-center justify-center">
+<!-- Placeholder for actual QR code, using an image for now -->
+<div class="w-full h-full bg-center bg-contain bg-no-repeat" data-alt="Generated QR code preview" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBONP1h1zryK2xqfAX-Ee4FNPVGGa20jlEvQ6l3NpJlFVsZIYNK-uNnrkV0snMOJKVNUrqcYjs2egQnaXQ_avEZctUHzqNXL9JmJ2XUv0g89E1K3BltOEK_OgrC13YXibkb1jNpTOwBVv3uTOwCi8x829uTufhesEafoQiCifQOFaBxNRQ9DuS1ov567iFS8eXqB3afTy45xdYJbiaH3PgldAihXsxMPhYH19v3TeFkz_G-fdSd0kR8fr8Cu3B33-TKP3Q32GWHuuuy');"></div>
+</div>
+<!-- Action Buttons -->
+<div class="flex gap-4 w-full justify-center mt-2">
+<button class="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-[#1a2634] transition-colors w-24">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined outlined">download</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Save</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-[#1a2634] transition-colors w-24">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined outlined">ios_share</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Share</span>
+</button>
+<button class="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-slate-100 dark:hover:bg-[#1a2634] transition-colors w-24">
+<div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined outlined">favorite</span>
+</div>
+<span class="text-xs font-medium text-slate-600 dark:text-slate-300">Favorite</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="fixed bottom-0 w-full max-w-[480px] bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 pb-safe z-50">
+<div class="flex justify-around items-center h-16 px-2">
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-primary transition-colors gap-1" href="#">
+<span class="material-symbols-outlined outlined">qr_code_scanner</span>
+<span class="text-[10px] font-medium">Scan</span>
+</a>
+<div class="relative -top-5 flex justify-center w-full">
+<a class="flex items-center justify-center w-14 h-14 rounded-full bg-primary text-white shadow-lg shadow-primary/40 hover:scale-105 transition-transform" href="#">
+<span class="material-symbols-outlined">add</span>
+</a>
+</div>
+<a class="flex flex-col items-center justify-center w-full h-full text-slate-400 hover:text-primary transition-colors gap-1" href="#">
+<span class="material-symbols-outlined outlined">history</span>
+<span class="text-[10px] font-medium">History</span>
+</a>
+</div>
+<div class="h-6 w-full"></div> <!-- Safe area bottom spacing padding -->
+</nav>
+</body></html>

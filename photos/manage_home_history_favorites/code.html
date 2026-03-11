@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QR Studio - Manage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d7ff2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="flex items-center p-4 pb-2 justify-between sticky top-0 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur z-10">
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">History &amp; Favorites</h2>
+</header>
+<!-- Segmented Control -->
+<div class="flex px-4 py-3">
+<div class="flex h-10 flex-1 items-center justify-center rounded-lg bg-slate-200 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal transition-all">
+<span class="truncate">History</span>
+<input checked="" class="invisible w-0" name="view-type" type="radio" value="History"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-slate-900 dark:has-[:checked]:text-white text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal transition-all">
+<span class="truncate">Favorites</span>
+<input class="invisible w-0" name="view-type" type="radio" value="Favorites"/>
+</label>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-2">
+<label class="flex flex-col w-full h-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg bg-slate-200 dark:bg-slate-800 h-full">
+<div class="text-slate-500 dark:text-slate-400 flex items-center justify-center pl-3">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-slate-900 dark:text-slate-100 bg-transparent focus:outline-none focus:ring-0 border-none h-full placeholder:text-slate-500 dark:placeholder:text-slate-400 px-3 text-base font-normal leading-normal" placeholder="Search items" value=""/>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 px-4 py-3 overflow-x-auto scrollbar-hide">
+<button class="flex h-8 shrink-0 items-center justify-center rounded-full bg-primary text-white px-4 text-sm font-medium leading-normal">
+            All
+        </button>
+<button class="flex h-8 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium leading-normal">
+            QR
+        </button>
+<button class="flex h-8 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium leading-normal">
+            Barcode
+        </button>
+<button class="flex h-8 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium leading-normal">
+            Scanned
+        </button>
+<button class="flex h-8 shrink-0 items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-4 text-sm font-medium leading-normal">
+            Generated
+        </button>
+</div>
+<!-- List Items -->
+<main class="flex-1 overflow-y-auto pb-24 px-4 space-y-3">
+<!-- Item 1 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800/80">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-2xl">qr_code_2</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-base font-semibold truncate text-slate-900 dark:text-slate-100">Google.com</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate mt-0.5">https://www.google.com</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-400 dark:text-slate-500">Today, 10:42 AM</span>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span class="text-xs text-slate-400 dark:text-slate-500">Scanned</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800/80">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center shrink-0 text-emerald-500">
+<span class="material-symbols-outlined text-2xl">barcode_scanner</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-base font-semibold truncate text-slate-900 dark:text-slate-100">Product A123</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate mt-0.5">0123456789012</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-400 dark:text-slate-500">Yesterday, 3:15 PM</span>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span class="text-xs text-slate-400 dark:text-slate-500">Generated</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center gap-4 bg-white dark:bg-slate-800/50 p-4 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800/80">
+<div class="w-12 h-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-2xl">qr_code_2</span>
+</div>
+<div class="flex-1 min-w-0">
+<h3 class="text-base font-semibold truncate text-slate-900 dark:text-slate-100">Wi-Fi Network</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate mt-0.5">WIFI:S:GuestNetwork;T:WPA;P:12345678;;</p>
+<div class="flex items-center gap-2 mt-1">
+<span class="text-xs text-slate-400 dark:text-slate-500">Oct 24, 9:00 AM</span>
+<span class="w-1 h-1 rounded-full bg-slate-300 dark:bg-slate-600"></span>
+<span class="text-xs text-slate-400 dark:text-slate-500">Scanned</span>
+</div>
+</div>
+<button class="text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur px-4 pb-safe pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary py-1" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">qr_code_scanner</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Scan</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary py-1" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">add_circle</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Create</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary py-1" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">history</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-[0.015em]">Manage</p>
+</a>
+</div>
+</body></html>

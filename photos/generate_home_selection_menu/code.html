@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QR Studio - Generate Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d7ff2",
+            "background-light": "#f5f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display flex flex-col min-h-screen text-slate-900 dark:text-slate-100">
+<!-- Header -->
+<div class="flex items-center px-4 py-4 justify-between border-b border-slate-200 dark:border-slate-800">
+<div class="w-8"></div>
+<h1 class="text-xl font-semibold tracking-tight flex-1 text-center">Generate</h1>
+<div class="w-8 flex justify-end">
+<button class="text-primary hover:text-primary/80 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 24px;">settings</span>
+</button>
+</div>
+</div>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Selection Cards -->
+<div class="p-4 flex flex-col gap-4">
+<!-- Website URL Card -->
+<a class="flex items-center gap-4 rounded-xl bg-white dark:bg-[#1a2634] p-5 shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-[0.98]" href="#">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">language</span>
+</div>
+<div class="flex flex-col flex-1">
+<h2 class="text-lg font-semibold leading-tight">Website URL</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5">Create a QR code for a web address</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<!-- Phone Number Card -->
+<a class="flex items-center gap-4 rounded-xl bg-white dark:bg-[#1a2634] p-5 shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-[0.98]" href="#">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">call</span>
+</div>
+<div class="flex flex-col flex-1">
+<h2 class="text-lg font-semibold leading-tight">Phone Number</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5">Create a QR code for a phone contact</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+<!-- Email Card (Additional) -->
+<a class="flex items-center gap-4 rounded-xl bg-white dark:bg-[#1a2634] p-5 shadow-sm border border-slate-100 dark:border-slate-800 transition-transform active:scale-[0.98]" href="#">
+<div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined" style="font-size: 28px;">mail</span>
+</div>
+<div class="flex flex-col flex-1">
+<h2 class="text-lg font-semibold leading-tight">Email Address</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-0.5">Generate a code to send an email</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 dark:text-slate-500">chevron_right</span>
+</a>
+</div>
+<!-- Recent Section -->
+<div class="mt-4">
+<div class="flex items-center justify-between px-4 pb-3">
+<h3 class="text-lg font-semibold">Recent</h3>
+<button class="text-primary text-sm font-medium hover:underline">See All</button>
+</div>
+<!-- Horizontal Carousel -->
+<div class="flex overflow-x-auto hide-scrollbar gap-4 px-4 pb-6 snap-x">
+<!-- Recent Item 1 -->
+<div class="flex flex-col gap-2 w-32 shrink-0 snap-start">
+<div class="aspect-square rounded-xl bg-white dark:bg-[#1a2634] border border-slate-200 dark:border-slate-700 p-2 shadow-sm flex items-center justify-center relative overflow-hidden group">
+<div class="w-full h-full bg-slate-100 dark:bg-slate-800 rounded-lg bg-cover bg-center" data-alt="Black and white QR code pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB2hhNaF7qUnMFcrPC0wtvYTKnSkIxx6uOHwjA25U46f_dxddcIHM4sYfDVvEDF9j6LbP6SwED4QDtQiiScF0OPdg-iyRO_EzCK9hgYECh1r2w9M8j_d5hSO1xcX8VyjQXCWANe8QhgC4tHj3PMZ6GG5rB9HrkWcxyNTy09qyH98VZ-G_VtCDgxP9Ybyg2HobAhvG5kqEMFt9fnDn-gWWI0ys63H2T1McmTWm86imkFPJIowh3KpaX4O5mBa8vFhG3a2h1I-e2ncgl0');"></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">open_in_new</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400" style="font-size: 14px;">language</span>
+<p class="text-sm font-medium truncate text-slate-700 dark:text-slate-300">google.com</p>
+</div>
+</div>
+<!-- Recent Item 2 -->
+<div class="flex flex-col gap-2 w-32 shrink-0 snap-start">
+<div class="aspect-square rounded-xl bg-white dark:bg-[#1a2634] border border-slate-200 dark:border-slate-700 p-2 shadow-sm flex items-center justify-center relative overflow-hidden group">
+<div class="w-full h-full bg-slate-100 dark:bg-slate-800 rounded-lg bg-cover bg-center" data-alt="Black and white QR code pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBH0NR-PLESQLzO87TvmVMamq7JrTKMjrN5tGQVsWKT7rxyBO1Ee1gJeE1fWLhHS8cT-ZwO2fpwqOA2Hk3ed4OEf7RftWjwr97sdAeqUMaxdBla7qKqLfSHSToDn5q8n-omF28SX-UEGzzI-HJxgPGEYpKvl4ryuTqaKjvtir_Ym0zk01VzBjXYge4koCHVZAQ6ThlgoJbN4xPMm6Xj1OZWsvr6930HyUJA0VSv0sgU1zkhwKmuSNd9AK0QFHrjCSAgrAED-H1DpAba');"></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">open_in_new</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400" style="font-size: 14px;">call</span>
+<p class="text-sm font-medium truncate text-slate-700 dark:text-slate-300">+1 555-0198</p>
+</div>
+</div>
+<!-- Recent Item 3 -->
+<div class="flex flex-col gap-2 w-32 shrink-0 snap-start">
+<div class="aspect-square rounded-xl bg-white dark:bg-[#1a2634] border border-slate-200 dark:border-slate-700 p-2 shadow-sm flex items-center justify-center relative overflow-hidden group">
+<div class="w-full h-full bg-slate-100 dark:bg-slate-800 rounded-lg bg-cover bg-center" data-alt="Black and white QR code pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCD00Swm97YgRFX0jNpUKCXyWmG1W0jb041pFDoTcQIFwYUf8LiUieWuor_cXDcUyKa_dzvQAIL6oA4cmDDmwQ0lkqHgCP8BiuQ9nQv8aC1UTAliI9QGRAsG-y36A2-qtKkfP4PZ608R3-pvs_OkvaRsBgy0YOH3JweI_IDjhOLD_A43sE2_jhiY2NA2u0kkZSuyL81rqyPQR5pUIo50-KFLUMji7NPDyhA3WSI2QAailcBWJpHU5pG8-eV0NdtpArYgq2YcH5_jRfK');"></div>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white">open_in_new</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-slate-400" style="font-size: 14px;">language</span>
+<p class="text-sm font-medium truncate text-slate-700 dark:text-slate-300">apple.com</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation -->
+<div class="fixed bottom-0 left-0 right-0 bg-white dark:bg-[#182634] border-t border-slate-200 dark:border-[#223649] px-4 pb-safe pt-2">
+<div class="flex gap-2 max-w-md mx-auto pb-4">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 hover:text-primary dark:text-[#90adcb] dark:hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 26px;">document_scanner</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Scan</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 26px; font-variation-settings: 'FILL' 1;">qr_code_2</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">Generate</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500 hover:text-primary dark:text-[#90adcb] dark:hover:text-primary transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined" style="font-size: 26px;">history</span>
+</div>
+<p class="text-[10px] font-medium leading-normal tracking-wide">History</p>
+</a>
+</div>
+</div>
+<style>
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .hide-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    .pb-safe {
+      padding-bottom: env(safe-area-inset-bottom, 1rem);
+    }
+  </style>
+</body></html>

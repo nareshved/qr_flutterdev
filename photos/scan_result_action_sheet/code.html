@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scan Result - Action Sheet</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#0d7ff2",
+          "background-light": "#f5f7f8",
+          "background-dark": "#101922",
+        },
+        fontFamily: {
+          "display": ["Inter", "sans-serif"]
+        },
+        borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+      },
+    },
+  }
+</script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col justify-end relative overflow-hidden">
+<!-- Background Camera View Simulation -->
+<div class="absolute inset-0 bg-cover bg-center z-0" data-alt="Camera view of a city street" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBbX2-JpTEgAqJNK5cuYJhzDQ9JKN61qUtpwzliNqKetfhGuxX6Sxh70AWtUoRIfXLGVquR_JsLlTKUFURtxVspwBOcdOAumxg_ITlGzsUchbUmXpA8hGhn3ygP1Ux8JsEQn-v4tEwKrxvceAroBRTk1lZWkjGuWwBW2OHzOCLz03srGMH8NgPpnLOJN5q3FNGKClgIYTIXOFw0V1rT_Mm7S05XNRGmVrOmE6UwX5iFAf4htueQ5u2bse5SyIcJOkk3xAiFtKkPnJ0H");'></div>
+<div class="absolute inset-0 bg-black/40 z-0"></div>
+<!-- Action Sheet Container -->
+<div class="relative z-10 flex flex-col items-stretch w-full max-w-md mx-auto bg-white/90 dark:bg-[#15222E]/90 backdrop-blur-xl rounded-t-3xl shadow-2xl pb-8 pt-2">
+<!-- Drag Handle -->
+<button class="flex h-6 w-full items-center justify-center pt-2 pb-4">
+<div class="h-1.5 w-12 rounded-full bg-slate-300 dark:bg-slate-600"></div>
+</button>
+<div class="flex-1 px-5">
+<!-- Header/Badge -->
+<div class="flex justify-center mb-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-primary/10 text-primary dark:bg-primary/20">
+<span class="material-symbols-outlined text-[14px] mr-1">qr_code_2</span>
+        QR • URL
+      </span>
+</div>
+<!-- Scanned Value -->
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight text-center break-words mb-6 px-4">
+      https://dribbble.com/shots/popular
+    </h2>
+<!-- Safe Status -->
+<div class="flex items-center gap-4 bg-slate-100 dark:bg-slate-800/50 p-4 rounded-xl mb-6">
+<div class="text-emerald-500 bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center rounded-full shrink-0 size-10">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal">Safe Link</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Verified by Google Safe Browsing</p>
+</div>
+</div>
+<!-- Primary Actions Row -->
+<div class="grid grid-cols-3 gap-3 mb-6">
+<button class="flex flex-col items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 py-3 rounded-xl transition-colors">
+<span class="material-symbols-outlined text-primary text-[28px]">open_in_browser</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Open Link</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 py-3 rounded-xl transition-colors">
+<span class="material-symbols-outlined text-primary text-[28px]">content_copy</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Copy</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-2 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 py-3 rounded-xl transition-colors">
+<span class="material-symbols-outlined text-primary text-[28px]">ios_share</span>
+<span class="text-sm font-medium text-slate-700 dark:text-slate-300">Share</span>
+</button>
+</div>
+<!-- Secondary Actions List -->
+<div class="bg-slate-100 dark:bg-slate-800/80 rounded-xl overflow-hidden divide-y divide-slate-200 dark:divide-slate-700/50">
+<button class="w-full flex items-center justify-between p-4 hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">favorite</span>
+<span class="text-base font-medium text-slate-700 dark:text-slate-200">Add to Favorites</span>
+</div>
+</button>
+<button class="w-full flex items-center justify-between p-4 hover:bg-slate-200/50 dark:hover:bg-slate-700/50 transition-colors text-red-500">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined">delete</span>
+<span class="text-base font-medium">Delete Scan</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+</body></html>

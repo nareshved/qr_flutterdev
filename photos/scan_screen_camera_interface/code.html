@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html class="dark"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QR Studio - Scan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0d7ff2",
+            "background-light": "#f5f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen relative overflow-hidden flex flex-col">
+<!-- Camera Background (Simulated) -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" data-alt="Abstract blurry background resembling a camera view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCKlaJUUUaO5KJRhz_hYSGQgXCiUR_jLyH4dL_8HXQe28SLq5_tVoimKWfiQDORW7hjD_0HBMsAM-wAe62u3T4pA96YvSTzAcVSEewmb-LXSKmhAcBB_Xvdw2gaePeNPv7LRVQwaO-3vbap4gcVGbRJiYXrqeteX6wDf85EGMnaHGaDuaVIfOoo4KEEWGLFH0ZoA2ppLp8xj6aqVqvdPwpA25n_PM2nM0hNqCqu1eV32jH-KuAyE66NDPGQCHz199h91FtqBgaJ-y7p');">
+<!-- Overlay to darken background slightly -->
+<div class="absolute inset-0 bg-black/40"></div>
+</div>
+<!-- Top Header -->
+<div class="relative z-10 flex items-center justify-between p-4 pt-12 bg-gradient-to-b from-black/60 to-transparent">
+<div class="w-10"></div> <!-- Spacer for centering title -->
+<h1 class="text-white text-xl font-semibold tracking-tight text-center flex-1">Scan</h1>
+<div class="w-10 flex justify-end">
+<button class="text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</div>
+</div>
+<!-- Scanning Area -->
+<div class="relative z-10 flex-1 flex flex-col items-center justify-center p-6">
+<!-- Instruction Text -->
+<p class="text-white text-base font-medium mb-8 tracking-wide drop-shadow-md bg-black/30 px-4 py-2 rounded-full backdrop-blur-sm">Point at a QR or barcode</p>
+<!-- Scanning Frame -->
+<div class="relative w-64 h-64 sm:w-80 sm:h-80 border-2 border-white/20 rounded-2xl shadow-[0_0_0_9999px_rgba(0,0,0,0.4)] backdrop-blur-[2px]">
+<!-- Corner Accents -->
+<div class="absolute top-0 left-0 w-10 h-10 border-t-4 border-l-4 border-primary rounded-tl-xl"></div>
+<div class="absolute top-0 right-0 w-10 h-10 border-t-4 border-r-4 border-primary rounded-tr-xl"></div>
+<div class="absolute bottom-0 left-0 w-10 h-10 border-b-4 border-l-4 border-primary rounded-bl-xl"></div>
+<div class="absolute bottom-0 right-0 w-10 h-10 border-b-4 border-r-4 border-primary rounded-br-xl"></div>
+<!-- Scanning Line Animation (Static representation) -->
+<div class="absolute top-1/2 left-4 right-4 h-0.5 bg-primary shadow-[0_0_8px_2px_rgba(13,127,242,0.6)] rounded-full"></div>
+</div>
+</div>
+<!-- Bottom Controls Overlay -->
+<div class="relative z-10 flex items-center justify-center gap-8 p-6 pb-24 bg-gradient-to-t from-black/80 via-black/40 to-transparent w-full">
+<!-- Flash Toggle -->
+<button class="flex flex-col items-center justify-center gap-2 group">
+<div class="flex items-center justify-center rounded-full size-12 bg-white/10 text-white backdrop-blur-md border border-white/20 group-hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-xl">flash_off</span>
+</div>
+<span class="text-white/80 text-xs font-medium">Flash</span>
+</button>
+<!-- Gallery Picker -->
+<button class="flex flex-col items-center justify-center gap-2 group">
+<div class="flex items-center justify-center rounded-full size-16 bg-white/20 text-white backdrop-blur-md border border-white/30 shadow-lg group-hover:bg-white/30 transition-all">
+<span class="material-symbols-outlined text-3xl">image</span>
+</div>
+<span class="text-white text-xs font-semibold">From Photos</span>
+</button>
+<!-- History Shortcut -->
+<button class="flex flex-col items-center justify-center gap-2 group">
+<div class="flex items-center justify-center rounded-full size-12 bg-white/10 text-white backdrop-blur-md border border-white/20 group-hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-xl">history</span>
+</div>
+<span class="text-white/80 text-xs font-medium">History</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="absolute bottom-0 left-0 right-0 z-20 flex gap-2 border-t border-white/10 bg-background-dark/90 backdrop-blur-xl px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-wide">Scan</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-slate-200 transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-wide">Generate</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 hover:text-slate-200 transition-colors" href="#">
+<div class="flex h-8 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">schedule</span>
+</div>
+<p class="text-xs font-medium leading-normal tracking-wide">History</p>
+</a>
+</div>
+</body></html>

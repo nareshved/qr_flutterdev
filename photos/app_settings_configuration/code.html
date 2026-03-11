@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QR Studio - Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d7ff2",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display flex flex-col min-h-screen antialiased selection:bg-primary/30">
+<!-- Header -->
+<header class="flex items-center justify-center p-4 pt-12 pb-4 bg-background-light dark:bg-background-dark sticky top-0 z-10 border-b border-slate-200 dark:border-slate-800">
+<h1 class="text-xl font-bold tracking-tight">Settings</h1>
+</header>
+<!-- Main Content -->
+<main class="flex-1 overflow-y-auto px-4 py-6 space-y-8">
+<!-- Scanning Behavior Section -->
+<section class="space-y-3">
+<h2 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 pl-4">Scanning Behavior</h2>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<!-- Toggle Item -->
+<div class="flex items-center justify-between p-4 bg-transparent border-b border-slate-100 dark:border-slate-800 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-primary/10 text-primary shrink-0">
+<span class="material-symbols-outlined text-lg">link</span>
+</div>
+<div class="flex flex-col">
+<span class="text-base font-medium">Auto-open URLs</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Open web links automatically</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item -->
+<div class="flex items-center justify-between p-4 bg-transparent border-b border-slate-100 dark:border-slate-800 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-orange-500/10 text-orange-500 shrink-0">
+<span class="material-symbols-outlined text-lg">vibration</span>
+</div>
+<div class="flex flex-col">
+<span class="text-base font-medium">Haptic Feedback</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Vibrate on successful scan</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- History & Privacy Section -->
+<section class="space-y-3">
+<h2 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 pl-4">History &amp; Privacy</h2>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<!-- Toggle Item -->
+<div class="flex items-center justify-between p-4 bg-transparent border-b border-slate-100 dark:border-slate-800 last:border-0">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-purple-500/10 text-purple-500 shrink-0">
+<span class="material-symbols-outlined text-lg">history</span>
+</div>
+<div class="flex flex-col">
+<span class="text-base font-medium">Save History</span>
+<span class="text-sm text-slate-500 dark:text-slate-400">Keep a record of scans</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-slate-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Action Item -->
+<button class="w-full flex items-center justify-between p-4 bg-transparent border-b border-slate-100 dark:border-slate-800 last:border-0 text-left active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-3 text-red-500">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-red-500/10 shrink-0">
+<span class="material-symbols-outlined text-lg">delete</span>
+</div>
+<span class="text-base font-medium">Clear History</span>
+</div>
+</button>
+</div>
+</section>
+<!-- Appearance Section -->
+<section class="space-y-3">
+<h2 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 pl-4">Appearance</h2>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<button class="w-full flex items-center justify-between p-4 bg-transparent border-b border-slate-100 dark:border-slate-800 last:border-0 text-left active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-8 h-8 rounded-lg bg-slate-500/10 text-slate-500 shrink-0">
+<span class="material-symbols-outlined text-lg">dark_mode</span>
+</div>
+<span class="text-base font-medium">Theme</span>
+</div>
+<div class="flex items-center gap-2 text-slate-500 dark:text-slate-400">
+<span class="text-base">System Default</span>
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</button>
+</div>
+</section>
+<!-- About Section -->
+<section class="space-y-3 pb-6">
+<h2 class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 pl-4">About</h2>
+<div class="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between p-4 bg-transparent border-b border-slate-100 dark:border-slate-800 last:border-0">
+<span class="text-base font-medium">Version</span>
+<span class="text-base text-slate-500 dark:text-slate-400">1.2.0 (Build 42)</span>
+</div>
+<button class="w-full flex items-center justify-between p-4 bg-transparent border-b border-slate-100 dark:border-slate-800 last:border-0 text-left active:bg-slate-50 dark:active:bg-slate-800/50 transition-colors">
+<span class="text-base font-medium">Licenses</span>
+<span class="material-symbols-outlined text-xl text-slate-400">chevron_right</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="flex justify-around items-center border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pb-safe pt-2 min-h-[64px] sticky bottom-0">
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex-1 py-1" href="#">
+<span class="material-symbols-outlined text-2xl">qr_code_scanner</span>
+<span class="text-[10px] font-medium">Scan</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors flex-1 py-1" href="#">
+<span class="material-symbols-outlined text-2xl">add_circle</span>
+<span class="text-[10px] font-medium">Create</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary flex-1 py-1" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</a>
+</nav>
+<!-- Safe area padding for newer iPhones -->
+<style>
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom, 16px); }
+    </style>
+</body></html>
